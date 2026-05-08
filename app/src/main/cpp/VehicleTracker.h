@@ -11,23 +11,15 @@ struct TrackedVehicle {
     int   id;
     int   classId;              // IDs: 0=person, 2=car, 5=bus, 7=truck
 
-    // Speed & Position Variables
-    // We now store the previous GROUND coordinates instead of just Pixel Y
+    // Variables
     float previousGroundX       = 0.f;
     float previousGroundY       = 0.f;
     long  previousTimestampNs   = 0;
-
     float currentSpeedKmh       = 0.f;
     float smoothedSpeedKmh      = 0.f;
-
-    // Tracking Variables
     int   framesSinceLastSeen   = 0;
     cv::Rect lastBoundingBox;
     cv::Mat  templateImage;
-
-    // Kalman filter
-    // State (6): [pixel_cx, pixel_cy, box_width, box_height, pixel_vx, pixel_vy]
-    // Measurement (4): [ground_x, ground_y, box_width, box_height]
     cv::KalmanFilter kf;
     bool kfInitialized          = false;
 };
