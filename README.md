@@ -13,7 +13,7 @@ Built with a hybrid **Kotlin + C++** architecture, this app leverages the power 
 * **Smooth UI Overlays:** Draws stable bounding boxes and speed labels directly over the live camera preview.
 
 ## Under the Hood (The Algorithms)
-This app following computer vision pipeline:
+This app uses the following computer vision pipeline:
 * **Deep Neural Networks (DNN):** Runs YOLO natively via OpenCV C++ for maximum mobile efficiency.
 * **Kalman Filters (6-State):** Acts as a physics engine to predict where a vehicle will be in the next frame. This smooths out camera jitters and keeps bounding boxes perfectly sized as vehicles approach.
 * **Ground Distance Computation:** Uses trigonometric pinhole camera modeling to translate 2D screen pixels into actual physical meters on the road.
