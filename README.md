@@ -1,6 +1,6 @@
 # SpeedoMeter Mobile
 
-Project-Members: 23L-0553, 23L-0718.
+Project-Members: 23L-0553, 23L-0718, 23L-0500.
 
 A high-performance Android application that detects and calculates the speed of moving vehicles and pedestrians in real-time. 
 
